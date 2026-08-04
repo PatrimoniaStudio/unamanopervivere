@@ -1187,11 +1187,12 @@ function Styles() {
       .notice svg { color: var(--stamp); flex-shrink: 0; margin-top: 1px; }
       .notice p { margin: 0; line-height: 1.55; }
 
-      @media print {
-        .sidebar, .modal-header, .modal-actions { display: none !important; }
-        .modal-overlay { position: static; background: none; padding: 0; }
-        .modal { box-shadow: none; max-height: none; }
-      }
+     @media print {
+  .sidebar, .main, .modal-header, .modal-actions, .toast { display: none !important; }
+  .modal-overlay { position: static; background: none; padding: 0; }
+  .modal { box-shadow: none; max-height: none; max-width: none; width: 100%; }
+  .modal-body { padding: 0; }
+}
 
       @media (max-width: 860px) {
         .sidebar { position: fixed; z-index: 40; }
